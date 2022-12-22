@@ -1367,6 +1367,12 @@ body {
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
 
+@media (min-width: 360px) {
+  .sim\:text-4xl {
+    font-size: 2.20rem;
+    line-height: 2.3rem;
+  }
+}
 @media (min-width: 640px) {
   .sm\:text-4xl {
     font-size: 2.25rem;

@@ -1,0 +1,85 @@
+.foot{
+    margin-top: 20px;
+}
+.prmg{
+    display: block;
+    border-radius: 8px;
+}
+
+@media (max-width: 360px) {
+    .lal{
+        width: 36px;
+        height: 36px;
+    }
+    .prmg{
+        display: none;
+    }
+    .naru{
+        margin-bottom: -100px;
+      
+    }
+    .foot{
+        display: none;
+    }
+}
+
+@media (min-width: 360px) {
+    .satu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+    }
+    .prmg{
+        display: none;
+    }
+    
+
+    .naru{
+        margin-bottom: -40px;
+    }
+    .tiga{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .foot{
+      
+        height: 120px;
+        margin-left: 5px;
+    }
+    .foot figcaption{
+        color: white;
+    }
+    .svg{
+        width: 36px;
+        height: 36px;
+    }
+}
+@media (min-width: 1280px) {
+    .foot{
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .foot{
+        display: none;
+    }
+    .prvd{
+        display: none;
+    }
+    .prmg{
+        display: block;
+    }
+
+
+}
+@media (min-width: 640px) {
+    .satu {
+        height: 200px;
+    }
+    .foot{
+        height: 100%;
+    }
+    
+}
