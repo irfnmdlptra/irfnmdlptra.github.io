@@ -18,8 +18,14 @@
         margin-bottom: -100px;
       
     }
+    .satu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+    }
     .foot{
-        display: none;
+        height: 120px;
+        margin-left: 5px;
     }
 }
 
