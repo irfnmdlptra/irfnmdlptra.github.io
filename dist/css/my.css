@@ -6,6 +6,8 @@
     border-radius: 8px;
 }
 
+
+
 @media (max-width: 360px) {
     .lal{
         width: 36px;
@@ -38,6 +40,7 @@
     .prmg{
         display: none;
     }
+  
     
 
     .naru{
@@ -71,7 +74,7 @@
     .foot{
         display: none;
     }
-    .prvd{
+    .prvd, .prv2{
         display: none;
     }
     .prmg{
@@ -88,4 +91,6 @@
         height: 100%;
     }
     
+    
 }
+
