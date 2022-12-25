@@ -58,10 +58,10 @@
   
 
 <div class="vidio">
-    <video play src="dist/img/video/fs.mp4"></video> -->
-    <video  play src="dist/img/video/fs2.mp4"></video>
-    <video  play src="dist/img/video/fs3.mp4"></video>
-    <video  play src="dist/img/video/fs4.mp4"></video> -->
+    <video  src="dist/img/video/fs.mp4"></video> -->
+    <video   src="dist/img/video/fs2.mp4"></video>
+    <video   src="dist/img/video/fs3.mp4"></video>
+    <video   src="dist/img/video/fs4.mp4"></video> -->
 
 </div>
   
@@ -80,7 +80,7 @@
       // Memasukkan isi dari input ke dalam tag strong
       document.getElementById("nameContainer").innerHTML = name;
       const vidio = document.querySelector("#fs");
-            vidio.setAttribute('play','');
+            vidio.setAttribute('controls','');
       
     }
 
@@ -91,6 +91,31 @@
       document.getElementById("strong").innerHTML = nama;
 
     }
+
+    document.cookie = "controls" + "" + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+
+    var attributeValue = getCookie('controls');
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
+    var attributeValue = getCookie('controls');
+
+console.log(attributeValue);
 
 
 
@@ -103,14 +128,14 @@
 // }
 
 // Mencari tag video
-var videos = document.getElementsByTagName('video');
+// var videos = document.getElementsByTagName('video');
 
-// Menambahkan atribut controls pada masing-masing tag video
-for (var i = 0; i < videos.length; i++) {
-  videos[i].removeAttribute('play', '');
-}
+// // Menambahkan atribut controls pada masing-masing tag video
+// for (var i = 0; i < videos.length; i++) {
+//   videos[i].removeAttribute('play', '');
+// }
 
-videos[i].setAttribute('controls', '');
+// videos[i].setAttribute('controls', '');
 
 
 
