@@ -6,6 +6,9 @@
     border-radius: 8px;
 }
 
+.portf{
+    text-align: center;
+}
 
 
 @media (max-width: 360px) {
@@ -69,6 +72,10 @@
     .foot{
         display: none;
     }
+    .portf{
+        width: 1180px;
+        margin-left: -300px;
+    }
 }
 @media (min-width: 768px) {
     .foot{
@@ -80,6 +87,10 @@
     .prmg{
         display: block;
     }
+ .portf{
+        width: 500px;
+
+    } 
 
 
 }
@@ -89,6 +100,11 @@
     }
     .foot{
         height: 100%;
+    }
+    .portf{
+        width: 800px;
+        margin-left: -120px;
+        text-align: center;
     }
     
     
