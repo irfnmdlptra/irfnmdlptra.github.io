@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Ku Ini Cuy</title>
+    <title>irfnmdlptra_</title>
     <link rel="icon" href="dist/img/icon.png" />
     <link href="dist/css/final.css" rel="stylesheet" />
     <link rel="stylesheet" href="dist/css/my.css" />
@@ -148,7 +148,11 @@
                 </svg>
               </a>
               <!-- Tiktok -->
-              <a href="https://www.tiktok.com/@mobahagia_?is_from_webapp=1&sender_device=pc" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-dark hover:bg-dark hover:text-white">
+              <a
+                href="https://www.tiktok.com/@mobahagia_?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-dark hover:bg-dark hover:text-white"
+              >
                 <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>TikTok</title>
                   <path
@@ -352,9 +356,9 @@
             </p>
           </div>
         </div>
-        <div class="lg:h-50 trasition btn-alert mb-5 hidden w-full rounded-lg bg-dark py-3 px-8 text-base font-semibold text-white duration-500 hover:opacity-80 hover:shadow-lg lg:mx-auto lg:w-2/3">
-          Terimakasih! <strong id="nama-anda"></strong> pesan anda telah kami terima..
-        </div>
+          <div class="lg:h-50 trasition btn-alert mb-5 hidden w-full rounded-lg bg-dark py-3 px-8 text-base font-semibold text-white duration-500 hover:opacity-80 hover:shadow-lg lg:mx-auto lg:w-2/3">
+            Terimakasih! <strong id="nama-anda"></strong> pesan anda telah kami terima..
+          </div>
         <form name="irfn-contact-form">
           <div class="w-full lg:mx-auto lg:w-2/3">
             <div class="mb-8 w-full px-4">
@@ -474,7 +478,11 @@
               </svg>
             </a>
             <!-- Tiktok -->
-            <a href="https://www.tiktok.com/@mobahagia_?is_from_webapp=1&sender_device=pc" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-dark hover:bg-dark hover:text-white">
+            <a
+              href="https://www.tiktok.com/@mobahagia_?is_from_webapp=1&sender_device=pc"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-dark hover:bg-dark hover:text-white"
+            >
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>TikTok</title>
                 <path
@@ -541,20 +549,19 @@
       const btnKirim = document.querySelector(".btn-kirim");
       const btnLoading = document.querySelector(".btn-loading");
       const btnAlert = document.querySelector(".btn-alert");
-
-      function captureName() {
+      const str = document.getElementsByTagName("strong");
+       
+      // function captureName() {
         // Menangkap input dengan nama "name"
-        var name = document.getElementsByName("name")[0].value;
+      
 
         // Memasukkan isi dari input ke dalam tag strong
         // document.getElementById("nama-anda").innerHTML = name;
-        var str = document.getElementsByTagName("strong");
+        // var str = document.getElementsByTagName("strong");
 
         // Menambahkan atribut controls pada masing-masing tag video
-        for (var i = 0; i < str.length; i++) {
-          str[i].innerHTML = name;
-        }
-      }
+       
+      // }
 
       // Tambahkan atribut controls pada elemen video
       // videoElement.
@@ -562,10 +569,13 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         btnLoading.classList.toggle("hidden");
-        btnKirim.classList.toggle("hidden");
+        btnKirim.classList.toggle("hidden");var name = document.getElementsByName("name")[0].value;
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
             btnAlert.classList.toggle("hidden");
+            for (var i = 0; i < str.length; i++) {
+                      str[i].innerHTML = name;
+                    }
             btnLoading.classList.toggle("hidden");
             btnKirim.classList.toggle("hidden");
             form.reset();
@@ -581,11 +591,20 @@
               videos[i].setAttribute("controls", "");
             }
             // localStorage.setItem('attributeName', attributeValue);
-          
 
             // notif.classList.toggle("hidden");
-            btnAlert.addEventListener("click", function () {
-              btnAlert.classList.toggle("hidden");
+            // btnAlert.addEventListener("click", function () {
+            //   btnAlert.classList.toggle("hidden");
+            //   for (var i = 0; i < str.length; i++) {
+            //     str[i].classList.toggle("hidden")
+            //   }
+            // });
+            window.addEventListener("click", function (e) {
+              if (e.target != btnAlert && e.target != str) {
+                btnAlert.classList.add("hidden");
+                var sam = document.getElementById("nama-anda")
+                sam.classList.add("hidden");
+              }
             });
             console.log("Success!", response);
           })
