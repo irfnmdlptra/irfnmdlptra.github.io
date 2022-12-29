@@ -32,6 +32,15 @@
         height: 120px;
         margin-left: 5px;
     }
+    #loading{
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+    #loading img {
+        margin-top: 100px;
+
+    }
 }
 
 @media (min-width: 360px) {
@@ -42,6 +51,14 @@
     }
     .prmg{
         display: none;
+    }
+    #loading{
+        display: flex;
+        justify-content: flex-start;
+    }
+    #loading img {
+        margin-top: 100px;
+
     }
   
     
@@ -72,9 +89,16 @@
     .foot{
         display: none;
     }
+
     .portf{
         width: 1180px;
         margin-left: -300px;
+    }
+
+    #loading{
+        display: flex;
+        justify-content: center;
+
     }
 }
 @media (min-width: 768px) {
@@ -91,6 +115,14 @@
         width: 500px;
 
     } 
+    #loading{
+        display: flex;
+        justify-content: center;
+    }
+    #loading img {
+        margin: 100px;
+
+    }
 
 
 }
@@ -106,7 +138,62 @@
         margin-left: -120px;
         text-align: center;
     }
-    
+    #loading{
+        display: flex;
+        justify-content: center;
+        
+    }
     
 }
+
+
+
+
+
+/* Loading Css  */
+.hilang{
+    display: none;
+  }
+  #load{
+  background: rgb(0, 0, 0) url(https://i.pinimg.com/originals/7b/df/16/7bdf164aaed98d4336084d0b33e3e588.gif) no-repeat center;
+  width: 100%;
+  height: 100vh;
+  z-index: 999999;
+  position: fixed;
+}
+ 
+  #loading {
+    background: rgba(0, 0, 0, 0.616);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  #loading img {
+    width: 30%;
+    /* definisikan animasi dengan nama 'slide-right' yang akan berlangsung selama 4 detik,
+ dan akan diulang-ulang setiap 8 detik */
+    animation: slide-right 5s infinite ease-in-out;
+  }
+
+  /* definisikan keyframes untuk animasi 'slide-right' */
+  @keyframes slide-right {
+    /* pada awal animasi, posisi gambar akan tetap pada tempatnya */
+    0% {
+      transform: translateX(0);
+    }
+    /* pada 50% animasi, gambar akan digeser ke kanan sejauh 100px */
+    50% {
+      transform: translateX(300px) rotateZ(-30deg);
+    }
+    /* pada akhir animasi, gambar akan kembali ke posisi awalnya */
+    100% {
+      transform: translateX(800px) rotateZ(0deg);
+    }
+  }
 
