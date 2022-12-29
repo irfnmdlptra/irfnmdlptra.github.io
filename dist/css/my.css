@@ -155,7 +155,7 @@
     display: none;
   }
   #load{
-  background: rgb(0, 0, 0) url(https://i.pinimg.com/originals/7b/df/16/7bdf164aaed98d4336084d0b33e3e588.gif) no-repeat center;
+  background: rgb(0, 0, 0) url(../img/gif/loadingrrefresh.gif) no-repeat center;
   width: 100%;
   height: 100vh;
   z-index: 999999;
