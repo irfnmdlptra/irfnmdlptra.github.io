@@ -103,3 +103,23 @@ window.addEventListener('load', function(){
    var error = (document.getElementById("error").src = "dist/img/gif/error.gif");
     error.style.display = "none";
   };
+
+
+  var title = "irfnmdlptra";
+  var icons = ["🔴", "🟡", "🟢","🔵","🟣","🟥","🟧","🟨","🟩","🟦","🟪","❤","🧡","💛","💚","💙","💜","🤎","💔","🌑","🌒","🌓","🌔","🌕","🌖","🌗","🌘","🌙","🌚","🌛","🌜","☀","🌞","⭐","🌟","🌠","☄"]; // Icon-icon yang akan ditampilkan
+  var currentIcon = 0;
+  
+  setInterval(function () {
+    var newTitle = title;
+  
+    for (var i = 0; i < 3; i++) {
+      if (currentIcon < icons.length - 1) {
+        currentIcon++;
+      } else {
+        currentIcon = 0;
+      }
+      newTitle += " " + icons[currentIcon];
+    }
+  
+    document.title = newTitle;
+  }, 300);

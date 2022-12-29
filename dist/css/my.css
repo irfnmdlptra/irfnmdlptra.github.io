@@ -183,7 +183,7 @@
     transition: all 0.5s;
   }
   #loading img {
-    width: 50%;
+    width: 30%;
     /* definisikan animasi dengan nama 'slide-right' yang akan berlangsung selama 4 detik,
  dan akan diulang-ulang setiap 8 detik */
     animation: slide-right 5s infinite ease-in-out;
