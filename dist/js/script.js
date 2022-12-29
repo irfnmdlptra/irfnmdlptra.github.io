@@ -66,3 +66,40 @@ var load = document.getElementById("load");
 window.addEventListener('load', function(){
   load.style.display = 'none';
 })
+
+
+
+
+
+// error 
+  // Menangkap peristiwa kehilangan koneksi internet
+  window.addEventListener("offline", function () {
+    // Mengubah src atribut error
+    var error = (document.getElementById("error").src = "dist/img/gif/nelson-tiapa-gif-baile2.gif");
+    error.style.display = "block";
+  });
+
+  // Menangkap peristiwa kembalinya koneksi internet
+  window.addEventListener("online", function () {
+    // Mengubah src atribut error
+    var error = (document.getElementById("error").src = "dist/img/gif/error.gif");
+    error.style.display = "none";
+  });
+  // Mengecek apakah web terhubung ke internet atau tidak
+  window.addEventListener("offline", function () {
+    // Mengubah src atribut error
+   var error = (document.getElementById("error").src = "dist/img/gif/error.gif");
+    error.style.display = "none";
+  });
+  // Menangkap peristiwa error
+  window.addEventListener("error", function () {
+    // Mengubah src atribut gambar
+   var error = (document.getElementById("error").src = "dist/img/gif/error.gif");
+    error.style.display = "none";
+  });
+  // Menangkap peristiwa error
+  window.onerror = function () {
+    // Mengubah src atribut gambar
+   var error = (document.getElementById("error").src = "dist/img/gif/error.gif");
+    error.style.display = "none";
+  };

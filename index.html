@@ -17,9 +17,10 @@
     </script>
   </head>
   <body>
+    <div id="error" style="display: none"></div>
     <div id="load"></div>
     <div id="lod"></div>
-    <div id="loading" style="display: none;" class="hilang">
+    <div id="loading" style="display: none" class="hilang">
       <img class="image" src="dist/img/gif/loadingform.gif" alt="loading" />
     </div>
     <!-- Header Section Strart -->
@@ -559,40 +560,40 @@
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        // loading button 
+        // loading button
         btnLoading.classList.toggle("hidden");
-        // Kirim Button 
-        btnKirim.classList.toggle("hidden"); 
+        // Kirim Button
+        btnKirim.classList.toggle("hidden");
         // loading form
         image.style.display = "block";
-        // Ketika Berhasil maka tampilkan yang dibawah ini 
+        // Ketika Berhasil maka tampilkan yang dibawah ini
         var name = document.getElementsByName("name")[0].value;
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
-            // notif alert 
+            // notif alert
             btnAlert.classList.toggle("hidden");
-            // mengubah tag strong menjadi name 
+            // mengubah tag strong menjadi name
             for (var i = 0; i < str.length; i++) {
               str[i].innerHTML = name;
             }
-            // menghilangkan loading 
+            // menghilangkan loading
             btnLoading.classList.toggle("hidden");
-            // Memunculkan Kirim 
+            // Memunculkan Kirim
             btnKirim.classList.toggle("hidden");
-            // Meriset Data 
+            // Meriset Data
             form.reset();
-            // Nyalakan Notification 
+            // Nyalakan Notification
             const notif = document.querySelector("#notif");
             notif.play();
-            // menghilangkan loading form 
+            // menghilangkan loading form
             image.style.display = "none";
-            // menangkap tag video 
+            // menangkap tag video
             var videos = document.getElementsByTagName("video");
             // Menambahkan atribut controls pada masing-masing tag video
             for (var i = 0; i < videos.length; i++) {
               videos[i].setAttribute("controls", "");
             }
-            // Ketika Window di clik maka hilangkan alert 
+            // Ketika Window di clik maka hilangkan alert
             window.addEventListener("click", function (e) {
               if (e.target != btnAlert && e.target != str) {
                 btnAlert.classList.add("hidden");
