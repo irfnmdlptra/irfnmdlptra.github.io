@@ -11,18 +11,24 @@
 }
 
 
-@media (max-width: 350px) {
-    .lal{
-        width: 36px;
-        height: 36px;
+@media (min-width: 360px) {
+
+       .sv{
+        margin-bottom: -40px;
+       } 
     }
+    @media (max-width: 360px) {
+        .lal{
+            width: 36px;
+            height: 36px;
+        }
+        .sv{
+         margin-bottom: -30px;
+        } 
     .prmg{
         display: none;
     }
-    .naru{
-        margin-bottom: 100px;
-      
-    }
+   
     .satu{
         display: flex;
         justify-content: space-between;
