@@ -11,20 +11,42 @@
     <link href="dist/css/final.css" rel="stylesheet" />
     <link rel="stylesheet" href="dist/css/my.css" />
     <script>
+      // <!-- Google Tag Manager -->
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M3R752V");
+      // <!-- End Google Tag Manager -->
+
+      //<!-- Start Dark Mode -->
       if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-sceme: dark)").matches)) {
         document.documentElement.classList.add("dark");
       } else {
         document.documentElement.classList.remove("dark");
       }
+      //<!-- End Dark Mode -->
     </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3R752V" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Start Animation Loading-->
     <div id="error" style="display: none"></div>
     <div id="load"></div>
     <div id="lod"></div>
     <div id="loading" style="display: none" class="hilang">
       <img class="image" src="dist/img/gif/loadingform.gif" alt="loading" />
     </div>
+    <!-- End Animation Loading-->
+    
     <!-- Header Section Strart -->
     <header class="bg-transparant absolute top-0 left-0 flex w-full items-center">
       <div class="container">
