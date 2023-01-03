@@ -50,6 +50,18 @@
     }
 }
 
+@media (min-width: 200px) {
+    #loading{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: -20px;
+    }
+    #loading img {
+        margin-top: 100px;
+    
+    }
+
+}
 @media (min-width: 360px) {
     .satu{
         display: flex;
@@ -58,14 +70,6 @@
     }
     .prmg{
         display: none;
-    }
-    #loading{
-        display: flex;
-        justify-content: flex-start;
-    }
-    #loading img {
-        margin-top: 100px;
-
     }
   
     
@@ -148,7 +152,6 @@
     #loading{
         display: flex;
         justify-content: center;
-        
     }
     
 }
