@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+  #loading {
+    background: #162953;
+    width: 100%;    
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  #loading img {
+    width: 30%;
+    /* definisikan animasi dengan nama 'slide-right' yang akan berlangsung selama 4 detik,
+ dan akan diulang-ulang setiap 8 detik */
+    animation: slide-right 5s infinite ease-in-out;
+    margin:auto;
+  }
+
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <img src="dist/img/gif/loadingrrefresh.gif" alt="">
+    </div>
+</body>
+</html>
